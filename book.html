@@ -129,7 +129,7 @@
     var processingCanvas = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(1);
+        frameRate(60);
         
 background(107, 85, 61);
 var books = [
@@ -260,7 +260,7 @@ image(getImage("cute/Star"), 12 + 7 + i * 95, 210, 20, 30);
     }
 }
 
-
+}};
     var canvas = document.getElementById("mycanvas"); 
     var processingInstance = new Processing(canvas, processingCanvas); 
  </script>
