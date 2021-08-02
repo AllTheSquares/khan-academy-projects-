@@ -62,11 +62,13 @@
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  <script type="text/javascript">
  	var trail = function(processingInstance) {
+ 		with(processingInstance){
  		size (500,500);
  		frameRate(60);
 
  		fill(255.255,255)
- 	}
+ 	}};
+ 	
 if mouseMoved {
 	fill(0,0,0)
 	ellipse(mouseX,mouseY,10,10);
