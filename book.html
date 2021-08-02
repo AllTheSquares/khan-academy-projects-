@@ -111,7 +111,7 @@
 				<td>Processing.JS</td>
 			</tr>
             <tr>
-            <td>Bookshelf</td>
+            <td><a href = https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/6661238555623424> Bookshelf </a></td>
             <td>Processing.JS</td>
             </tr>
 	</tbody> 
@@ -129,136 +129,14 @@
     var processingCanvas = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(60);
+        frameRate(1);
         
-background(107, 85, 61);
-var books = [
-    {
-    title: "I Know Why the Caged Bird Sings",
-    author: "Maya Angelou",
-    stars: 1
-    },
-    {
-    title: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    stars:3
-    },
-    {
-    title: "The Hunger Games",
-    author: "Suzanne Collins",
-    stars: 4,
-    },
-    {
-    title: "Maniac Magee",
-    author: "Jerry Spinelli",
-    stars: 4
-    }
-];
 
-var colors = [
-    color(214,255,219),
-    color(219, 155, 155),
-    color(171, 218, 222),
-    color(235, 213, 170),
-    color(random(100,255),random(100,255),random(100,255)),
-    ];
-
-// draw shelf
-fill(173, 117, 33);
-rect(0, 120, width, 10);
-
-// draw one book
-
-
-for (var i = 0; i < books.length; i++) {
-    fill(colors[i]);
-    rect(12+i*95, 20, 90, 100);
-    fill(0, 0, 0);
-    text(books[i].title, 12+ i*95+13, 29, 70, 100);
-    text(books[i].author, 12+ i*95+13, 73, 70, 100);
-    
-    if (books[i].stars === 4) {
-    image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 7 + i * 95, 90, 20, 30);
-    image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 +28 + i * 95, 90, 20, 30);
-    image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 +49 + i * 95, 90, 20, 30);
-    image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 +70 + i * 95, 90, 20, 30);
-    } else if (books[i].stars === 3) {
-        image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 +7 + i * 95, 90, 20, 30);
-        image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12+28 + i * 95, 90, 20, 30);
-        image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12+49 + i * 95, 90, 20, 30);
-    } else if (books[i].stars === 2) {
-        image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12+7 + i * 95, 90, 20, 30);
-        image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12+28 + i * 95, 90, 20, 30);
-    } else if (books[i].stars === 1) {
-        image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12+7 + i * 95, 90, 20, 30);
-    }
-}
-
-var books2 = [
-    {
-    title: "Hatchet",
-    author: "Gary Paulsen",
-    stars: 2
-    },
-    {
-    title: "Crispin: The Cross of Lead",
-    author: "Avi",
-    stars:3
-    },
-    {
-    title: "Catching Fire",
-    author: "Suzanne Collins",
-    stars: 4,
-    },
-    {
-    title: "The City of Ember",
-    author: "Jeanne Duprau",
-    stars: 2
-    }
-];
-
-var colors2 = [
-    color(189, 199, 252),
-    color(244, 255, 161),
-    color(255, 145, 145),
-    color(212, 163, 104),
-    color(random(100,255),random(100,255),random(100,255)),
-    ];
-
-// draw shelf
-fill(173, 117, 33);
-rect(0, 120, width, 10);
-fill(173, 117, 33);
-rect(0, 240, width, 10);
-
-// draw one book
-
-
-for (var i = 0; i < books2.length; i++) {
-    fill(colors2[i]);
-    rect(12+i*95, 140, 90, 100);
-    fill(0, 0, 0);
-    text(books2[i].title, 12+ i*95+13, 150, 70, 100);
-    text(books2[i].author, 12+ i*95+13, 192, 70, 100);
-    
-    if (books2[i].stars === 4) {
-    image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 7 + i * 95, 210, 20, 30);
-     image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 28 + i * 95, 210, 20, 30);
-      image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 49 + i * 95, 210, 20, 30);
-       image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 70 + i * 95, 210, 20, 30);
-    } else if (books2[i].stars === 3) {
-image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 7 + i * 95, 210, 20, 30);
-     image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 28 + i * 95, 210, 20, 30);
-      image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 49 + i * 95, 210, 20, 30);
-       
-    } else if (books2[i].stars === 2) {
-       image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 7 + i * 95, 210, 20, 30);
-     image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 28 + i * 95, 210, 20, 30);
-    
-    } else if (books2[i].stars === 1) {
-       image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/Star.png"), 12 + 7 + i * 95, 210, 20, 30);
-    }
-}
+            fill(255,255,0);
+            textAlign(CENTER,TOP);
+            textSize(15);
+            text("Unfortunately, this project does not function as intended \nin this site, despite best efforts.\n Click on the Bookshelf hyperlink again \n to be redirected to Khan Academy \n to see this project in its glory.", 200, 150);
+  
 
 }};
     var canvas = document.getElementById("mycanvas"); 
