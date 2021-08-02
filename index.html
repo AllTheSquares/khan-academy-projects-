@@ -131,8 +131,15 @@
         size(400, 400); 
         frameRate(1);
         
+        background(0,150,0)
         fill (255,255,0)
-        text("click on the programs labeled processing.js to see them come to life here!", 5, 190)
+        textAlign(CENTER,TOP);
+        textSize(15);
+        text('Click on the programs labeled', 190, 100)
+                textSize(30)
+        text('Processing.JS', 190, 125)
+        textSize(15);
+        text("to see them come to life in this box.", 190, 175)
     }};
 
     var canvas = document.getElementById("mycanvas"); 
