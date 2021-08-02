@@ -86,7 +86,7 @@
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
-			<td>Build-a-House</td>
+			<td><a href = https://www.khanacademy.org/computer-programming/spin-off-of-project-build-a-house/5032434552750080> Build-a-House</a></td>
 			<td>Processing.JS</td>
 		</tr>
 			<tr>
@@ -126,76 +126,14 @@
 	        size(400, 400); 
 	        frameRate(60);
 	        
-	        
-background(219, 255, 255);
-var x = 90;
-var y = 200;
+	           background(150,0,0);
+	     
 
-    var drawFlower = function() {
-         var flowerX = random(0,400);
-    var flowerY = random(335,400);
-    var R = random(0,255);
-    var G = random(0,255);
-    var B = random(0,255);
-    fill(R,G,B);
-    noStroke();
-    ellipse(flowerX, flowerY, 10, 10);
-    };
-    
+	        fill(255,255,0);
+	        textAlign(CENTER,TOP);
+	        textSize(15);
+	        text("This project does not work on this site, \n even with me trying to get it to work. \n Click on the Build-A-House hyperlink again \n to be redirected to Khan Academy \n to see this project in its glory.", 200, 150);
   
-var wood = getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/WoodBlock.png");
-fill(248, 255, 196);
-rect(60, 150, 280, 207);
-x=60;
-y=99;
-for (var k = 0; k < 3; k++) {
-    image(wood,x,y, 281,150);
-    y+=54;
-}
-fill(120, 80, 19);
-rect(180, 280, 40, 77);
-var grass = getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/cute/GrassBlock.png");
-x = 0;
-for (var j = 0; j < 4; j++) {
-    image(grass, x, 300,100,131);
-    x+=100;
-}
-var Flower = 0;
-while (Flower < 100) {
-      drawFlower();
-      Flower++;
-}
-draw = function() {
-     fill(255, 133, 133);
-triangle(200, 28, 350, 150, 50, 150);
-
-
-
-
-
-fill (181, 225, 255);
-x=90;
-y=200;
-for (var i = 0; i < 2; i++) {
-    rect(x,y, 25,45);
-    x+=30;
-    rect(x-30,y+50, 25,45);
-    
-}
-
-x = 260;
-
-for (var i = 0; i < 2; i++) {
-    rect(x,y, 25,45);
-    x+=30;
-    rect(x-30,y+50, 25,45);
-    
-   
-    
-}
- 
-      
-};
 
 	    }};
 
