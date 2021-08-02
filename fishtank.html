@@ -102,10 +102,6 @@
             <td>Processing.JS</td>
             </tr>
             <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/makeitrain.html>Make it Rain</a></td>
-            <td>Processing.JS</td>
-            </tr>
-            <tr>
             <td><a href = https://allthesquares.github.io/khan-academy-projects-/shootingstar.html>Shooting Star</a></td>
             <td>Processing.JS</td>
             </tr>
@@ -128,7 +124,7 @@
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
-    var fishtank = function(processingInstance) {
+    var khanProject = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
         frameRate(15);
@@ -217,7 +213,7 @@ bodyLength =random(10,68);
     }};
 
     var canvas = document.getElementById("mycanvas"); 
-    var processingInstance = new Processing(canvas, fishtank); 
+    var processingInstance = new Processing(canvas, khanProject); 
  </script>
 
     </html>
