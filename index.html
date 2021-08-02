@@ -53,116 +53,41 @@
 </h4>
 <!--About This Page-->
     <h2 id = "about-page">Khan Academy Projects</h2>
-    <p class ="about-site">Treat yourself, explore the many projects that I have done to make this webpage a reality.</p>
+    <p class ="about-site">Treat yourself, explore the many projects that I have done to make this webpage a reality. HTML projects load on another webpage.</p>
+<table align="left">
+	<thead>
+		<tr>Program</tr>
+		<tr>Language</tr>
+		</thead>
+	<tbody>
+		<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/fishtank.html>Fish Tank</td>
+				<td>Processing.JS</td>
+	</tbody> 
 
-  <p align="center"> 
-	<!--This draws the Canvas on the webpage -->
+<p align="right"> 
+    <!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
     </p>
  </body>
- 
- <!-- Run all the JavaScript stuff -->
- <!-- Include the processing.js library -->
- <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+<!--- Kudos to Khan Academy for the Processing.JS code! --->
+
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
-    var fishtank = function(processingInstance) {
+    var processingCanvas = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(15);
+        frameRate(1);
         
-        
-var bodyLength =random(10,100);
-var drawFish = function(centerX, centerY) {
-var centerX;
-var centerY;
-var colorR = random(0,255);
-var colorB = random(0,255);
-var colorG = random(0,255);
-
-var bodyHeight =44;
-var bodyColor = color(colorR, colorB,colorG);
-
-noStroke();
-fill(bodyColor);
-// body
-ellipse(centerX, centerY, bodyLength, bodyLength/1.5);
-
-// eye
-fill(33, 33, 33);
-ellipse(centerX+bodyLength/4, centerY, bodyLength/8, bodyLength/8);
-
-// tail
-fill(bodyColor);
-var tailWidth = bodyLength/4;
-var tailHeight = bodyLength/3;
-triangle(centerX-bodyLength/2, centerY,
-         centerX-bodyLength/2-tailWidth, centerY-tailHeight,
-         centerX-bodyLength/2-tailWidth, centerY+tailHeight);
-
-};
-    background(89, 216, 255);
- fill (255, 246, 186);
-noStroke();
-    rect (0,325,400,75);
-    
-    var drawSeaweed = function() {
-        
-        var seaLength = random(140, 214);
-        var seaPosX = random(10, 383);
-         fill(0, 150, 0);
-    rect (seaPosX, 190, 10, seaLength);
-    };
-    for (var i = 0; i < 67; i++){
-      drawSeaweed();
-    }
-   var Bubbles = function() {
-       var posX = random (10, 399);
-       var posY = random(10,399);
-       fill(171, 255, 238);
-       ellipse(posX, posY, 10, 10);
-   };
-  
-  for (var i = 0; i < 100; i++){
-      Bubbles();
-  }
-
-    mousePressed = function() {
-    bodyLength =random(10,100);
-    drawFish(mouseX,mouseY);
-    };
-    
-    keyPressed = function(){
-    var x = random (10, 399);
-    var y = random(10,399);
-    bodyLength = random(10,100);
-    drawFish(x,y);
-    };
-drawFish(100,100);
-var bodyLength =(10,68);
-drawFish(278,48);
-
-drawFish(207,207);
-bodyLength =random (10,68);
-drawFish(300,137);
-bodyLength =random(10,68);
-drawFish(69,270);
-bodyLength =random(10,68);
-drawFish(300,292);
-bodyLength =random(10,68);
-   
-
+        fill (255,255,0)
+        text("click on the programs labeled processing.js to see them come to life here!", 100, 100)
     }};
 
-    // Get the canvas that Processing-js will use
     var canvas = document.getElementById("mycanvas"); 
-    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
-    var processingInstance = new Processing(canvas, fishtank); 
+    var processingInstance = new Processing(canvas, processingCanvas); 
  </script>
 
     </html>
 
-
-
-
+    </html>
