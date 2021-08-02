@@ -90,11 +90,11 @@
 			<td>Processing.JS</td>
 		</tr>
 			<tr>
-			<td><a href = https://allthesquares.github.io/khan-academy-projects/8ball.html>Magic 8-Ball</a>a</td>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/8ball.html>Magic 8-Ball</a></td>
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
-			<td><a href = https://allthesquares.github.io/khan-academy-projects-/wannabreakfromtheads.html>Ad design</a></td>
+			<td>Ad design</td>
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
@@ -102,7 +102,7 @@
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
-			<td>Shooting Star</td>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/shootingstar.html>Shooting Star</a></td>
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
@@ -124,71 +124,47 @@
     var khanProject = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(15);
+        frameRate(60);
         
         
-var xPos = 50;
-var yPos = 50;
 
+var Marquee = 400;
 draw = function() {
-   var answer = 7;
+    background(196, 255, 148);
+fill(255, 0, 0);
+textSize(23);
+text("An astonishing way to play music.", 10, 30);
+textSize(20);
+text("Introducing - The Record Player/ Turntable.",10,60);
 
-draw = function() {
-     fill(0, 0, 0);
-ellipse(200, 200, 375, 375);
-fill(60, 0, 255);
-triangle(200, 104, 280, 280, 120, 280);
-fill(255, 255, 255);
-if (answer === 7) {
-        fill(204, 0, 255);
-        textSize(24);
-        text("Click anywhere to shake the ball.", 25,  200);
-    }
-mouseClicked = function() {
-    textSize(12.0);
-    answer = floor(random(0,5));
-};
+    fill(133, 89, 0);
+noStroke();
+rect(100,175,200,75); 
+fill(71, 71, 71);
+ellipse(200,205,183,50);
+fill(255, 234, 0);
+ellipse(200,202,25, 12);
+fill(77, 58, 2);
+fill(255,0,0);
+textSize(14);
+text("Listen to 33' or 45' records in ", 37, 110);
+text("the LP format, providing great music quality.",66,129);
 
-if (answer === 1) {
-    fill(60, 214, 214);
-    text("IT COULD ", 171, 200);
-    text("BE PLAUSIBLE.", 158, 229); 
-}
-else if (answer === 2) {
-        fill(60, 214, 214);
-    text ("NO, DON'T", 168, 200);
-    text ("EVEN TRY.", 166, 229);
-}
-    else if (answer === 3) {
-            fill(60, 214, 214);
-    text ("WHY EVEN", 168, 200);
-    text ("BOTHER?", 171, 229);
-}
-else if (answer === 4) {
-        fill(60, 214, 214);
-         text ("NO IDEA.", 176, 200);
-    text ("ASK ME", 177, 227);
-    text ("SOMETHING ELSE?", 144, 251);
-}
-    else if (answer === 5) {
-        fill(60, 214, 214);
-    text ("IT'S WORTH", 166, 208);
-    text ("A SHOT.", 174, 228);
-    } 
-    else if (answer !==7){
-           fill(60, 214, 214);
-    text ("MY SOURCES", 160, 208);
-    text ("CAN'T DECIDE.", 158, 229);
+textSize(20);
+    text("Access a large library of music hits from today and a long time ago, all in one iconic format.", Marquee, 280);
+    Marquee -=1;
+    
+
+    if(Marquee < -800){
+        Marquee = 400;
     }
     
-    
-};
-
 };
 
 
 
 
+   
 
     }};
 
