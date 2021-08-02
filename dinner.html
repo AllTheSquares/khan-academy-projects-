@@ -34,9 +34,9 @@
             font-size: 20px;
         }
         .selector { 
-            position: absolute;
-            align: left;
-            left: 500px;
+        	position: absolute;
+        	align: left;
+        	left: 500px;
         }
         .canvasProcessing {
         position: absolute;
@@ -68,53 +68,55 @@
     <p class ="about-site">Treat yourself, explore the many projects that I have done to make this webpage a reality. HTML projects load on another webpage.</p>
 
 <table class = "selector">
-    <thead>
-        <h4>
-        <tr>
-            <td>Program    </td>
-            <td>Language</td>
-        </tr>
-        <h4>
-        </thead>
-    <tbody>
-        <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/fishtank.html>Fish Tank</a></td>
-                <td>Processing.JS</td>
-            </tr>
-            <tr>
-            <td>Make it Rain</td>
-            <td>Processing.JS</td>
-            </tr>
-            <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/buildahouse.html>Build-a-House</a></td>
-            <td>Processing.JS</td>
-        </tr>
-            <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/8ball.html>Magic 8-Ball</a></td>
-            <td>Processing.JS</td>
-            </tr>
-            <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/wannabreakfromtheads.html>Ad design</a></td>
-            <td>Processing.JS</td>
-            </tr>
-            <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/animalattack.html>Animal Attack</a></td>
-            <td>Processing.JS</td>
-            </tr>
-            <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/shootingstar.html>Shooting Star</a></td>
-            <td>Processing.JS</td>
-            </tr>
-            <tr>
-                <td><A href = https://allthesquares.github.io/khan-academy-projects-/dinner.html>What's for Dinner?</A></td>
-                <td>Processing.JS</td>
-            </tr>
+	<thead>
+		<h4>
+		<tr>
+			<td>Program    </td>
+			<td>Language</td>
+		</tr>
+		<h4>
+		</thead>
+	<tbody>
+		<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/fishtank.html>Fish Tank</a></td>
+				<td>Processing.JS</td>
+			</tr>
+			<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/makeitrain.html>Make it Rain</a></td>
+			<td>Processing.JS</td>
+			</tr>
+			<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/buildahouse.html>Build-a-House</a></td>
+			<td>Processing.JS</td>
+		</tr>
+			<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/8ball.html>Magic 8-Ball</a></td>
+			<td>Processing.JS</td>
+			</tr>
+			<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/wannabreakfromtheads.html>Ad design</a></td>
+			<td>Processing.JS</td>
+			</tr>
+			<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/animalattack.html>Animal Attack</td>
+			<td>Processing.JS</td>
+
+			</tr>
+			<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/shootingstar.html>Shooting Star</a></td>
+			<td>Processing.JS</td>
+			</tr>
+			<tr>
+				<td><A href = https://allthesquares.github.io/khan-academy-projects-/dinner.html>What's for Dinner?</A></td>
+				<td>Processing.JS</td>
+			</tr>
             <tr>
             <td><a href = https://allthesquares.github.io/khan-academy-projects-/book.html>Bookshelf.html</a></td>
             <td>Processing.JS</td>
             </tr>
-    </tbody> 
-<p class = "canvasProcessing" align = 'right'> 
+	</tbody> 
+
+	<p class = "canvasProcessing" align = 'right'> 
     <!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
     </p>
@@ -127,39 +129,28 @@
     var khanProject = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(60);
-var xPositions = [random(1,399),random(1,399),random(1,399),random(1,399),random(1,399)];
-var yPositions = [0, 5, 10, 15, 20];
+        frameRate(1);
+        
+        
+background(186, 145, 20); // wooden table
+ellipse(200, 200, 350, 350); // plate
+ellipse(200, 200, 300, 300);
 
-draw = function() {
-    background(147, 195, 204);
+ellipse(140,140,100,100);
+fill(148, 0, 67);
+strokeWeight(1);
+ellipse(140,140,85,85);
 
-    noStroke();
-    fill(0, 200, 255);
+fill(250, 246, 163);
+ellipse(256,138,119,113);
+fill(143, 114, 0);
+noStroke();
+triangle(304,285,341,157,170,339);
+triangle(177,221,317,187,172,338);
+fill(0, 112, 17);
+ellipse(125,255,75,75);
 
-mousePressed = function() {
-    xPositions.push(mouseX);
-    yPositions.push(mouseY);
-
-};
-
-var R = [0, 100, random(1,255)];
-var G = [200, 100, random(1,255)];
-var B = [255, 100, random(1, 255)];
-
-    for (var i = 0; i < xPositions.length; i++) {
-        ellipse(xPositions[i], yPositions[i], 10, 45);
-        if (yPositions[i] > 450) {
-            yPositions[i] = 0;
-            xPositions[i] = random(1,399);
-        }
-        else {
-            yPositions[i] += random(10,40);
-            fill(random(1,255),random(1,255),random(1,255));
-        }
-    }
-};
-
+   
 
     }};
 

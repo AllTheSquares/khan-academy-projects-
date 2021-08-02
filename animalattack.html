@@ -1,4 +1,4 @@
-    <!doctype html>
+  <!doctype html>
     <html>
     <style type="text/css">
 
@@ -98,10 +98,10 @@
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
-			<td><a href = https://allthesquares.github.io/khan-academy-projects-/animalattack.html>Animal Attack</a></td>
+			<td>Animal Attack</td>
 			<td>Processing.JS</td>
-			</tr>
 
+			</tr>
 			<tr>
 			<td><a href = https://allthesquares.github.io/khan-academy-projects-/shootingstar.html>Shooting Star</a></td>
 			<td>Processing.JS</td>
@@ -110,13 +110,13 @@
 				<td><A href = https://allthesquares.github.io/khan-academy-projects-/dinner.html>What's for Dinner?</A></td>
 				<td>Processing.JS</td>
 			</tr>
-            <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/book.html>Bookshelf.html</a></td>
-            <td>Processing.JS</td>
-            </tr>
+			<tr>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects-/book.html>Bookshelf.html</a></td>
+			<td>Processing.JS</td>
+			</tr>
 	</tbody> 
 
-<p class = "canvasProcessing" align = 'right'> 
+	<p class = "canvasProcessing" align = 'right'> 
     <!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
     </p>
@@ -126,19 +126,48 @@
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
-    var processingCanvas = function(processingInstance) {
+    var khanProject = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(1);
+        frameRate(15);
         
-        fill (255,255,0)
-        text("click on the programs labeled processing.js to see them come to life here!", 5, 190)
+        
+var bodyX = 200;
+var bodyY = 230;
+var bodyW = 105;
+var faceW = bodyW/2;
+var faceH = faceW;
+var eyePosX1 =188;
+var eyePosX2 = 211;
+var eyeY=146;
+draw = function() {
+    background(207, 254, 255);
+    fill(179, 177, 170);
+    rect(165,261,27,bodyW);
+    rect(206,261,27,bodyW);
+    triangle(bodyX+110,160,272,bodyY-15,230,220);
+    triangle(bodyX-110,160,128,bodyY-15,170,220);
+    ellipse(200, 230, 105, 125); // body?
+    ellipse(200, 150, faceW, faceH);//face>
+    
+
+    fill(0,0,0);
+    ellipse(eyePosX1,eyeY,10,10);
+     ellipse(eyePosX2,eyeY,10,10);
+    fill(230, 71, 71);
+    ellipse(200,163,faceW-22,faceH-40);
+eyePosX2++;
+eyePosX1--;
+eyeY--;
+faceW+=3;
+faceH+=3;
+
+};
+
     }};
 
     var canvas = document.getElementById("mycanvas"); 
-    var processingInstance = new Processing(canvas, processingCanvas); 
+    var processingInstance = new Processing(canvas, khanProject); 
  </script>
-
-    </html>
 
     </html>
