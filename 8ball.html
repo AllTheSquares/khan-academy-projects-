@@ -1,4 +1,4 @@
-    <!doctype html>
+  <!doctype html>
     <html>
     <style type="text/css">
 
@@ -90,7 +90,7 @@
 			<td>Processing.JS</td>
 		</tr>
 			<tr>
-			<td><a href = https://allthesquares.github.io/khan-academy-projects-/8ball.html>Magic 8-Ball</a></td>
+			<td><a href = https://allthesquares.github.io/khan-academy-projects/8ball.html>Magic 8-Ball</a>a</td>
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
@@ -101,9 +101,8 @@
 			<td><a href = https://allthesquares.github.io/khan-academy-projects-/animalattack.html>Animal Attack</a></td>
 			<td>Processing.JS</td>
 			</tr>
-
 			<tr>
-			<td><a href = https://allthesquares.github.io/khan-academy-projects-/shootingstar.html>Shooting Star</a></td>
+			<td>Shooting Star</td>
 			<td>Processing.JS</td>
 			</tr>
 			<tr>
@@ -112,7 +111,7 @@
 			</tr>
 	</tbody> 
 
-<p class = "canvasProcessing" align = 'right'> 
+	<p class = "canvasProcessing" align = 'right'> 
     <!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
     </p>
@@ -122,19 +121,106 @@
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
-    var processingCanvas = function(processingInstance) {
+    var khanProject = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(1);
+        frameRate(15);
         
-        fill (255,255,0)
-        text("click on the programs labeled processing.js to see them come to life here!", 5, 190)
+        
+var xPos = 50;
+var yPos = 50;
+
+draw = function() {
+    
+    noStroke();
+    background(29, 40, 115);
+    fill(200,200,200);
+    ellipse(57,77,50,50);
+    fill(255, 242, 0);
+    ellipse(xPos, yPos, 10, 10);
+    
+    xPos++;
+    yPos = yPos+2;
+    
+    ellipse(-xPos+400,yPos,10,10);
+    
+    fill (0,0,0);
+    rect(0, 200,100, 200);
+    rect(100, 250,100, 150);
+    rect(200, 150,100, 250);
+    rect(300,300,100,100);
+    
+    var windowY = 220;
+    fill(196, 253, 255);
+    
+    rect(40,windowY,20,25);
+     rect(10,windowY,20,25);
+      rect(70,windowY,20,25);
+      windowY += 45;
+      rect(40,windowY,20,25);
+      rect(10,windowY,20,25);
+      rect(70,windowY,20,25);
+      windowY+=45;
+          rect(40,windowY,20,25);
+     rect(10,windowY,20,25);
+      rect(70,windowY,20,25);
+      windowY+=45;
+      rect(40,windowY,20,25);
+      rect(10,windowY,20,25);
+      rect(70,windowY,20,25);
+      
+    windowY=265;
+    rect (110, windowY, 20, 25);
+    rect (140, windowY, 20, 25);
+    rect (170, windowY, 20, 25);
+    windowY+=45;
+    rect (110, windowY, 20, 25);
+    rect (140, windowY, 20, 25);
+    rect (170, windowY, 20, 25);
+    windowY+=45;
+    rect (110, windowY, 20, 25);
+    rect (140, windowY, 20, 25);
+    rect (170, windowY, 20, 25);
+    
+    windowY=175;
+    rect (210, windowY, 20, 25);
+    rect (240, windowY, 20, 25);
+    rect (270, windowY, 20, 25);
+    windowY+=45;
+    rect (210, windowY, 20, 25);
+    rect (240, windowY, 20, 25);
+    rect (270, windowY, 20, 25);
+    windowY+=45;
+    rect (210, windowY, 20, 25);
+    rect (240, windowY, 20, 25);
+    rect (270, windowY, 20, 25);
+    windowY+=45;
+    rect (210, windowY, 20, 25);
+    rect (240, windowY, 20, 25);
+    rect (270, windowY, 20, 25);
+    windowY+=45;
+    rect (210, windowY, 20, 25);
+    rect (240, windowY, 20, 25);
+    rect (270, windowY, 20, 25);
+    
+    windowY=310;
+    rect (310, windowY, 20, 25);
+    rect (340, windowY, 20, 25);
+    rect (370, windowY, 20, 25);
+    windowY+=45;
+    rect (310, windowY, 20, 25);
+    rect (340, windowY, 20, 25);
+    rect (370, windowY, 20, 25);
+};
+
+
+
+
+
     }};
 
     var canvas = document.getElementById("mycanvas"); 
-    var processingInstance = new Processing(canvas, processingCanvas); 
+    var processingInstance = new Processing(canvas, khanProject); 
  </script>
-
-    </html>
 
     </html>
