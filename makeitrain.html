@@ -78,11 +78,11 @@
         </thead>
     <tbody>
         <tr>
-            <td>Fish Tank</td>
+            <td><a href = https://allthesquares.github.io/khan-academy-projects-/fishtank.html>Fish Tank</a></td>
                 <td>Processing.JS</td>
             </tr>
             <tr>
-            <td><a href = https://allthesquares.github.io/khan-academy-projects-/makeitrain.html>Make it Rain</a></td>
+            <td>Make it Rain</td>
             <td>Processing.JS</td>
             </tr>
             <tr>
@@ -114,10 +114,6 @@
                 <td>Processing.JS</td>
             </tr>
     </tbody> 
-
-
-
-
 <p class = "canvasProcessing" align = 'right'> 
     <!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
@@ -128,96 +124,47 @@
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
  
  <script>
-    var fishtank = function(processingInstance) {
+    var khanProject = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
-        frameRate(15);
-        
-        
-var bodyLength =random(10,100);
-var drawFish = function(centerX, centerY) {
-var centerX;
-var centerY;
-var colorR = random(0,255);
-var colorB = random(0,255);
-var colorG = random(0,255);
+        frameRate(60);
+var xPositions = [random(1,399),random(1,399),random(1,399),random(1,399),random(1,399)];
+var yPositions = [0, 5, 10, 15, 20];
 
-var bodyHeight =44;
-var bodyColor = color(colorR, colorB,colorG);
+draw = function() {
+    background(147, 195, 204);
 
-noStroke();
-fill(bodyColor);
-// body
-ellipse(centerX, centerY, bodyLength, bodyLength/1.5);
+    noStroke();
+    fill(0, 200, 255);
 
-// eye
-fill(33, 33, 33);
-ellipse(centerX+bodyLength/4, centerY, bodyLength/8, bodyLength/8);
-
-// tail
-fill(bodyColor);
-var tailWidth = bodyLength/4;
-var tailHeight = bodyLength/3;
-triangle(centerX-bodyLength/2, centerY,
-         centerX-bodyLength/2-tailWidth, centerY-tailHeight,
-         centerX-bodyLength/2-tailWidth, centerY+tailHeight);
+mousePressed = function() {
+    xPositions.push(mouseX);
+    yPositions.push(mouseY);
 
 };
-    background(89, 216, 255);
- fill (255, 246, 186);
-noStroke();
-    rect (0,325,400,75);
-    
-    var drawSeaweed = function() {
-        
-        var seaLength = random(140, 214);
-        var seaPosX = random(10, 383);
-         fill(0, 150, 0);
-    rect (seaPosX, 190, 10, seaLength);
-    };
-    for (var i = 0; i < 67; i++){
-      drawSeaweed();
+
+var R = [0, 100, random(1,255)];
+var G = [200, 100, random(1,255)];
+var B = [255, 100, random(1, 255)];
+
+    for (var i = 0; i < xPositions.length; i++) {
+        ellipse(xPositions[i], yPositions[i], 10, 45);
+        if (yPositions[i] > 450) {
+            yPositions[i] = 0;
+            xPositions[i] = random(1,399);
+        }
+        else {
+            yPositions[i] += random(10,40);
+            fill(random(1,255),random(1,255),random(1,255));
+        }
     }
-   var Bubbles = function() {
-       var posX = random (10, 399);
-       var posY = random(10,399);
-       fill(171, 255, 238);
-       ellipse(posX, posY, 10, 10);
-   };
-  
-  for (var i = 0; i < 100; i++){
-      Bubbles();
-  }
+};
 
-    mousePressed = function() {
-    bodyLength =random(10,100);
-    drawFish(mouseX,mouseY);
-    };
-    
-    keyPressed = function(){
-    var x = random (10, 399);
-    var y = random(10,399);
-    bodyLength = random(10,100);
-    drawFish(x,y);
-    };
-drawFish(100,100);
-var bodyLength =(10,68);
-drawFish(278,48);
-
-drawFish(207,207);
-bodyLength =random (10,68);
-drawFish(300,137);
-bodyLength =random(10,68);
-drawFish(69,270);
-bodyLength =random(10,68);
-drawFish(300,292);
-bodyLength =random(10,68);
-   
 
     }};
 
     var canvas = document.getElementById("mycanvas"); 
-    var processingInstance = new Processing(canvas, fishtank); 
+    var processingInstance = new Processing(canvas, khanProject); 
  </script>
 
     </html>
