@@ -1,6 +1,7 @@
 <!doctype html>
     <html>
     <style type="text/css">
+
         body{
             text-align:center;
             font-family:sans-serif;
@@ -32,9 +33,15 @@
             margin: left 50px;
             font-size: 20px;
         }
-        #selector { 
+        .selector { 
         	position: absolute;
         	align: left;
+        	top: 100pxz;
+        }
+        .canvasProcessing {
+        position: all;
+        float: right;
+
         }
     </style>
     <title>The Website of the Square</title>
@@ -58,10 +65,15 @@
 <!--About This Page-->
     <h2 id = "about-page">Khan Academy Projects</h2>
     <p class ="about-site">Treat yourself, explore the many projects that I have done to make this webpage a reality. HTML projects load on another webpage.</p>
-<table id = "selector">
+
+<table class = "selector">
 	<thead>
-		<tr>Program</tr>
-		<tr>Language</tr>
+		<h4>
+		<tr>
+			<td>Program    </td>
+			<td>Language</td>
+		</tr>
+		<h4>
 		</thead>
 	<tbody>
 		<tr>
@@ -69,7 +81,7 @@
 				<td>Processing.JS</td>
 	</tbody> 
 
-<p align="right"> 
+<p class = "canvasProcessing" align = 'right'> 
     <!--This draws the Canvas on the webpage -->
       <canvas id="mycanvas"></canvas> 
     </p>
@@ -85,7 +97,7 @@
         frameRate(1);
         
         fill (255,255,0)
-        text("click on the programs labeled processing.js to see them come to life here!", 50, 190)
+        text("click on the programs labeled processing.js to see them come to life here!", 5, 190)
     }};
 
     var canvas = document.getElementById("mycanvas"); 
